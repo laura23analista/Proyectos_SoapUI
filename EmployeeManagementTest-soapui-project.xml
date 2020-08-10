@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<con:soapui-project id="0d797947-a0bd-4541-a3fd-2a577e7f12ba" activeEnvironment="Default" name="EmployeeManagementTest" resourceRoot="" soapui-version="5.6.0" xmlns:con="http://eviware.com/soapui/config"><con:settings/><con:interface xsi:type="con:WsdlInterface" id="65f4fb0e-41d8-4f17-ba83-6a2a61d7842c" wsaVersion="NONE" name="EmployeeManagementServiceSoap12Binding" type="wsdl" bindingName="{http://sample.com/reservation/guest}EmployeeManagementServiceSoap12Binding" soapVersion="1_2" anonymous="optional" definition="http://216.10.245.166:8080/axis2/services/EmployeeManagementService?wsdl" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><con:settings/><con:definitionCache/><con:endpoints><con:endpoint>http://216.10.245.166:8080/axis2/services/EmployeeManagementService.EmployeeManagementServiceHttpSoap12Endpoint/</con:endpoint></con:endpoints><con:operation id="9ef96915-9bf8-4dcd-8738-f9df6c21a328" isOneWay="false" action="urn:addEmployee" name="addEmployee" bindingOperationName="addEmployee" type="Request-Response" inputName="" receivesAttachments="false" sendsAttachments="false" anonymous="optional"><con:settings/><con:call id="93026424-627c-477b-9d7b-df9ee25993e7" name="Request 1"><con:settings/><con:encoding>UTF-8</con:encoding><con:endpoint>http://216.10.245.166:8080/axis2/services/EmployeeManagementService.EmployeeManagementServiceHttpSoap12Endpoint/</con:endpoint><con:request><![CDATA[<soap:Envelope xmlns:soap="http://www.w3.org/2003/05/soap-envelope" xmlns:typ="http://sample.com/reservation/guest/types">\r
+<con:soapui-project id="0d797947-a0bd-4541-a3fd-2a577e7f12ba" activeEnvironment="Default" name="EmployeeManagementTest" resourceRoot="" soapui-version="5.6.0" abortOnError="false" runType="SEQUENTIAL" xmlns:con="http://eviware.com/soapui/config"><con:settings/><con:interface xsi:type="con:WsdlInterface" id="65f4fb0e-41d8-4f17-ba83-6a2a61d7842c" wsaVersion="NONE" name="EmployeeManagementServiceSoap12Binding" type="wsdl" bindingName="{http://sample.com/reservation/guest}EmployeeManagementServiceSoap12Binding" soapVersion="1_2" anonymous="optional" definition="http://216.10.245.166:8080/axis2/services/EmployeeManagementService?wsdl" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><con:settings/><con:definitionCache/><con:endpoints><con:endpoint>http://216.10.245.166:8080/axis2/services/EmployeeManagementService.EmployeeManagementServiceHttpSoap12Endpoint/</con:endpoint></con:endpoints><con:operation id="9ef96915-9bf8-4dcd-8738-f9df6c21a328" isOneWay="false" action="urn:addEmployee" name="addEmployee" bindingOperationName="addEmployee" type="Request-Response" inputName="" receivesAttachments="false" sendsAttachments="false" anonymous="optional"><con:settings/><con:call id="93026424-627c-477b-9d7b-df9ee25993e7" name="Request 1"><con:settings/><con:encoding>UTF-8</con:encoding><con:endpoint>http://216.10.245.166:8080/axis2/services/EmployeeManagementService.EmployeeManagementServiceHttpSoap12Endpoint/</con:endpoint><con:request><![CDATA[<soap:Envelope xmlns:soap="http://www.w3.org/2003/05/soap-envelope" xmlns:typ="http://sample.com/reservation/guest/types">\r
    <soap:Header/>\r
    <soap:Body>\r
       <typ:addEmployee>\r
@@ -270,12 +270,12 @@
          <typ:employeeName>?</typ:employeeName>\r
       </typ:getEmployeeDetails>\r
    </soapenv:Body>\r
-</soapenv:Envelope>]]></con:request><con:wsaConfig mustUnderstand="NONE" version="200508" action="urn:getEmployeeDetails"/></con:call></con:operation></con:interface><con:testSuite id="6a83240b-ebbb-41ce-b5ff-f5056287963f" name="EmpMang"><con:settings/><con:runType>SEQUENTIAL</con:runType><con:testCase id="86ea2e5c-3f77-45f3-8e04-624218b3b518" failOnError="true" failTestCaseOnErrors="true" keepSession="false" maxResults="0" name="AddEmployee" searchProperties="true"><con:settings/><con:testStep type="request" name="add" id="297a0d55-6035-46e2-98f5-f9860c6e3141"><con:settings/><con:config xsi:type="con:RequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><con:interface>EmployeeManagementServiceSoap12Binding</con:interface><con:operation>addEmployee</con:operation><con:request name="add" id="8e7df9e3-3aad-44d3-86b0-7798ade674e8"><con:settings/><con:encoding>UTF-8</con:encoding><con:endpoint>http://216.10.245.166:8080/axis2/services/EmployeeManagementService.EmployeeManagementServiceHttpSoap12Endpoint/</con:endpoint><con:request><![CDATA[<soap:Envelope xmlns:soap="http://www.w3.org/2003/05/soap-envelope" xmlns:typ="http://sample.com/reservation/guest/types">
+</soapenv:Envelope>]]></con:request><con:wsaConfig mustUnderstand="NONE" version="200508" action="urn:getEmployeeDetails"/></con:call></con:operation></con:interface><con:testSuite id="6a83240b-ebbb-41ce-b5ff-f5056287963f" name="EmpMang"><con:settings/><con:runType>SEQUENTIAL</con:runType><con:testCase id="86ea2e5c-3f77-45f3-8e04-624218b3b518" failOnError="true" failTestCaseOnErrors="true" keepSession="false" maxResults="0" name="AddEmployee" searchProperties="true"><con:settings/><con:testStep type="request" name="add" id="297a0d55-6035-46e2-98f5-f9860c6e3141"><con:settings/><con:config xsi:type="con:RequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><con:interface>EmployeeManagementServiceSoap12Binding</con:interface><con:operation>addEmployee</con:operation><con:request name="add" id="8e7df9e3-3aad-44d3-86b0-7798ade674e8"><con:settings><con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting></con:settings><con:encoding>UTF-8</con:encoding><con:endpoint>http://216.10.245.166:8080/axis2/services/EmployeeManagementService.EmployeeManagementServiceHttpSoap12Endpoint/</con:endpoint><con:request><![CDATA[<soap:Envelope xmlns:soap="http://www.w3.org/2003/05/soap-envelope" xmlns:typ="http://sample.com/reservation/guest/types">
    <soap:Header/>
    <soap:Body>
       <typ:addEmployee>
          <!--Optional:-->
-         <typ:name>Viky</typ:name>
+         <typ:name>MAURICIO</typ:name>
          <!--Optional:-->
          <typ:id>1267</typ:id>
          <!--Optional:-->
@@ -284,15 +284,17 @@
          <typ:age>34</typ:age>
       </typ:addEmployee>
    </soap:Body>
-</soap:Envelope>]]></con:request><con:assertion type="SOAP Response" id="7dab25b4-8062-4a9e-9a74-817d9462286e"/><con:credentials><con:authType>No Authorization</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:wsaConfig mustUnderstand="NONE" version="200508"/><con:wsrmConfig version="1.2"/></con:request></con:config></con:testStep><con:properties><con:property><con:name>age</con:name><con:value>34</con:value></con:property><con:property><con:name>name</con:name><con:value>Viky</con:value></con:property><con:property><con:name>id</con:name><con:value>1267</con:value></con:property></con:properties></con:testCase><con:testCase id="44df3aec-6f6c-469f-8ed5-5af2e9613538" failOnError="true" failTestCaseOnErrors="true" keepSession="false" maxResults="0" name="GetEmployee" searchProperties="true"><con:settings/><con:testStep type="request" name="get" id="ece732c8-ed4a-46fd-ae55-9c0d03fad6ba"><con:settings/><con:config xsi:type="con:RequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><con:interface>EmployeeManagementServiceSoap12Binding</con:interface><con:operation>getEmployeeDetails</con:operation><con:request name="get" id="07a1b8ba-27c4-486b-bfdd-033a33ac5d3d"><con:settings/><con:encoding>UTF-8</con:encoding><con:endpoint>http://216.10.245.166:8080/axis2/services/EmployeeManagementService.EmployeeManagementServiceHttpSoap12Endpoint/</con:endpoint><con:request><![CDATA[<soap:Envelope xmlns:soap="http://www.w3.org/2003/05/soap-envelope" xmlns:typ="http://sample.com/reservation/guest/types">\r
-   <soap:Header/>\r
-   <soap:Body>\r
-      <typ:getEmployeeDetails>\r
-         <!--Optional:-->\r
-         <typ:employeeName>?</typ:employeeName>\r
-      </typ:getEmployeeDetails>\r
-   </soap:Body>\r
+</soap:Envelope>]]></con:request><con:assertion type="SOAP Response" id="7dab25b4-8062-4a9e-9a74-817d9462286e"/><con:credentials><con:authType>No Authorization</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:wsaConfig mustUnderstand="NONE" version="200508"/><con:wsrmConfig version="1.2"/></con:request></con:config></con:testStep><con:properties><con:property><con:name>age</con:name><con:value>34</con:value></con:property><con:property><con:name>name</con:name><con:value>MAURICIO</con:value></con:property><con:property><con:name>id</con:name><con:value>1267</con:value></con:property></con:properties></con:testCase><con:testCase id="44df3aec-6f6c-469f-8ed5-5af2e9613538" failOnError="true" failTestCaseOnErrors="true" keepSession="false" maxResults="0" name="GetEmployee" searchProperties="true"><con:settings/><con:testStep type="request" name="get" id="ece732c8-ed4a-46fd-ae55-9c0d03fad6ba"><con:settings/><con:config xsi:type="con:RequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><con:interface>EmployeeManagementServiceSoap12Binding</con:interface><con:operation>getEmployeeDetails</con:operation><con:request name="get" id="07a1b8ba-27c4-486b-bfdd-033a33ac5d3d"><con:settings><con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting></con:settings><con:encoding>UTF-8</con:encoding><con:endpoint>http://216.10.245.166:8080/axis2/services/EmployeeManagementService.EmployeeManagementServiceHttpSoap12Endpoint/</con:endpoint><con:request><![CDATA[<soap:Envelope xmlns:soap="http://www.w3.org/2003/05/soap-envelope" xmlns:typ="http://sample.com/reservation/guest/types">
+   <soap:Header/>
+   <soap:Body>
+      <typ:getEmployeeDetails>
+         <!--Optional:-->
+         <typ:employeeName>MAURICIO</typ:employeeName>
+      </typ:getEmployeeDetails>
+   </soap:Body>
 </soap:Envelope>]]></con:request><con:assertion type="SOAP Response" id="ef81c845-f034-4d92-adb2-f034b3a65fa5"/><con:credentials><con:authType>No Authorization</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:wsaConfig mustUnderstand="NONE" version="200508"/><con:wsrmConfig version="1.2"/></con:request></con:config></con:testStep><con:properties><con:property><con:name>id</con:name><con:value>123</con:value></con:property></con:properties></con:testCase><con:testCase id="6775e8f3-b0d8-4c3d-a760-dbefb2e872a7" failOnError="true" failTestCaseOnErrors="true" keepSession="false" maxResults="0" name="Script" searchProperties="true"><con:settings/><con:testStep type="groovy" name="Groovy Script" id="1cccbf7e-b075-419d-9a8c-b230ce955416"><con:settings/><con:config><script>import com.eviware.soapui.support.XmlHolder
+
+import com.eviware.soapui.impl.wsdl.testcase.WsdlTestRunContext
 
 log.info "Hola este es mi primer programa"
 
@@ -349,4 +351,44 @@ testRunner.testCase.testSuite.testCases["AddEmployee"].testSteps["add"].setPrope
 
 // llama al servicio-
 
-</script></con:config></con:testStep><con:properties/></con:testCase><con:properties/></con:testSuite><con:properties/><con:wssContainer/><con:oAuth2ProfileContainer/><con:oAuth1ProfileContainer/></con:soapui-project>
+//context of AddEmployee testcase should be passed as Add step which we are trying to run belonge to that Testcase
+
+// El contexto del caso de prueba AddEmployee debe pasarse como el paso Agregar que estamos intentando ejecutar y
+// que pertenece a ese caso de prueba
+
+
+def addTestStep= testRunner.testCase.testSuite.testCases["AddEmployee"].testSteps["add"]
+def contextAddEmployee= new WsdlTestRunContext(addTestStep);
+
+  addTestStep.run(testRunner,contextAddEmployee)
+
+//Hit GetEmployee and generate response..Validate the response if it haven the name which added in our earlier Step
+// Pulse GetEmployee y genere una respuesta. Valide la respuesta si tiene el nombre que se agregó en nuestro paso anterior.
+
+def getReq= testRunner.testCase.testSuite.testCases["GetEmployee"].testSteps["get"].getPropertyValue("Request")
+def getEmpxml= new XmlHolder(getReq)
+getEmpxml.setNodeValue("//typ:getEmployeeDetails/typ:employeeName",name)
+def newgetEmployee=getEmpxml.getXml()
+ testRunner.testCase.testSuite.testCases["GetEmployee"].testSteps["get"].setPropertyValue("Request",newgetEmployee)
+
+
+ def getTestStep= testRunner.testCase.testSuite.testCases["GetEmployee"].testSteps["get"];
+
+def contextGetEmployee= new WsdlTestRunContext(addTestStep);
+getTestStep.run(testRunner,contextGetEmployee)
+
+//Validation- 
+
+
+
+
+
+
+
+
+
+
+
+
+
+</script></con:config></con:testStep><con:properties/></con:testCase><con:properties/></con:testSuite><con:properties/><con:wssContainer/><con:oAuth2ProfileContainer/><con:oAuth1ProfileContainer/><con:sensitiveInformation/></con:soapui-project>
