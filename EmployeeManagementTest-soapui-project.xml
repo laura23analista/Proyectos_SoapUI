@@ -275,7 +275,7 @@
    <soap:Body>
       <typ:addEmployee>
          <!--Optional:-->
-         <typ:name>MAURICIO</typ:name>
+         <typ:name>naty</typ:name>
          <!--Optional:-->
          <typ:id>1267</typ:id>
          <!--Optional:-->
@@ -284,12 +284,12 @@
          <typ:age>34</typ:age>
       </typ:addEmployee>
    </soap:Body>
-</soap:Envelope>]]></con:request><con:assertion type="SOAP Response" id="7dab25b4-8062-4a9e-9a74-817d9462286e"/><con:credentials><con:authType>No Authorization</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:wsaConfig mustUnderstand="NONE" version="200508"/><con:wsrmConfig version="1.2"/></con:request></con:config></con:testStep><con:properties><con:property><con:name>age</con:name><con:value>34</con:value></con:property><con:property><con:name>name</con:name><con:value>MAURICIO</con:value></con:property><con:property><con:name>id</con:name><con:value>1267</con:value></con:property></con:properties></con:testCase><con:testCase id="44df3aec-6f6c-469f-8ed5-5af2e9613538" failOnError="true" failTestCaseOnErrors="true" keepSession="false" maxResults="0" name="GetEmployee" searchProperties="true"><con:settings/><con:testStep type="request" name="get" id="ece732c8-ed4a-46fd-ae55-9c0d03fad6ba"><con:settings/><con:config xsi:type="con:RequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><con:interface>EmployeeManagementServiceSoap12Binding</con:interface><con:operation>getEmployeeDetails</con:operation><con:request name="get" id="07a1b8ba-27c4-486b-bfdd-033a33ac5d3d"><con:settings><con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting></con:settings><con:encoding>UTF-8</con:encoding><con:endpoint>http://216.10.245.166:8080/axis2/services/EmployeeManagementService.EmployeeManagementServiceHttpSoap12Endpoint/</con:endpoint><con:request><![CDATA[<soap:Envelope xmlns:soap="http://www.w3.org/2003/05/soap-envelope" xmlns:typ="http://sample.com/reservation/guest/types">
+</soap:Envelope>]]></con:request><con:assertion type="SOAP Response" id="7dab25b4-8062-4a9e-9a74-817d9462286e"/><con:credentials><con:authType>No Authorization</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:wsaConfig mustUnderstand="NONE" version="200508"/><con:wsrmConfig version="1.2"/></con:request></con:config></con:testStep><con:properties><con:property><con:name>age</con:name><con:value>34</con:value></con:property><con:property><con:name>name</con:name><con:value>naty</con:value></con:property><con:property><con:name>id</con:name><con:value>1267</con:value></con:property></con:properties></con:testCase><con:testCase id="44df3aec-6f6c-469f-8ed5-5af2e9613538" failOnError="true" failTestCaseOnErrors="true" keepSession="false" maxResults="0" name="GetEmployee" searchProperties="true"><con:settings/><con:testStep type="request" name="get" id="ece732c8-ed4a-46fd-ae55-9c0d03fad6ba"><con:settings/><con:config xsi:type="con:RequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><con:interface>EmployeeManagementServiceSoap12Binding</con:interface><con:operation>getEmployeeDetails</con:operation><con:request name="get" id="07a1b8ba-27c4-486b-bfdd-033a33ac5d3d"><con:settings><con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting></con:settings><con:encoding>UTF-8</con:encoding><con:endpoint>http://216.10.245.166:8080/axis2/services/EmployeeManagementService.EmployeeManagementServiceHttpSoap12Endpoint/</con:endpoint><con:request><![CDATA[<soap:Envelope xmlns:soap="http://www.w3.org/2003/05/soap-envelope" xmlns:typ="http://sample.com/reservation/guest/types">
    <soap:Header/>
    <soap:Body>
       <typ:getEmployeeDetails>
          <!--Optional:-->
-         <typ:employeeName>MAURICIO</typ:employeeName>
+         <typ:employeeName>naty</typ:employeeName>
       </typ:getEmployeeDetails>
    </soap:Body>
 </soap:Envelope>]]></con:request><con:assertion type="SOAP Response" id="ef81c845-f034-4d92-adb2-f034b3a65fa5"/><con:credentials><con:authType>No Authorization</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:wsaConfig mustUnderstand="NONE" version="200508"/><con:wsrmConfig version="1.2"/></con:request></con:config></con:testStep><con:properties><con:property><con:name>id</con:name><con:value>123</con:value></con:property></con:properties></con:testCase><con:testCase id="6775e8f3-b0d8-4c3d-a760-dbefb2e872a7" failOnError="true" failTestCaseOnErrors="true" keepSession="false" maxResults="0" name="Script" searchProperties="true"><con:settings/><con:testStep type="groovy" name="Groovy Script" id="1cccbf7e-b075-419d-9a8c-b230ce955416"><con:settings/><con:config><script>import com.eviware.soapui.support.XmlHolder
@@ -377,9 +377,21 @@ def newgetEmployee=getEmpxml.getXml()
 def contextGetEmployee= new WsdlTestRunContext(addTestStep);
 getTestStep.run(testRunner,contextGetEmployee)
 
-//Validation- 
+//Validation-
 
 
+def getRes=testRunner.testCase.testSuite.testCases["GetEmployee"].testSteps["get"].getPropertyValue("Response")
+
+def getEmpRes= new XmlHolder(getRes) 
+def Getresponse=getEmpRes.getNodeValue("//ns:name")
+
+log.info Getresponse
+
+log.info name
+
+assert Getresponse==name
+
+// Delete 
 
 
 
